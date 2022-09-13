@@ -11,7 +11,7 @@ services:
 #    networks:
 #      - zerotrust
     environment:
-      VNC_PW: 'Aotest123'
+      VNC_PW: 'Aotest789'
 
     deploy:
       replicas: 1
