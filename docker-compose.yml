@@ -1,0 +1,28 @@
+version: '3.3'
+services:
+  kasm_web:
+    image: chompoonutb/kasmterm:20220913
+    shm_size: '512mb'
+    volumes:
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+    ports:
+      - 6901
+#    networks:
+#      - zerotrust
+    environment:
+      VNC_PW: 'Aotest123'
+
+    deploy:
+      replicas: 1
+      resources:
+        reservations:
+          cpus: '0.2'
+          memory: 512M
+        limits:
+          cpus: '4.0'
+          memory: 8G
+
+#networks:
+#  zerotrust:
+#    external: true
